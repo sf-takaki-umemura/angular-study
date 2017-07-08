@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -23,6 +24,8 @@ namespace AspNetCoreSpa.Server.Entities
                 return this.FirstName + " " + this.LastName;
             }
         }
+
+        public ICollection<WorkingRecord> WorkingRecords { get; set; }
 
     }
 }
